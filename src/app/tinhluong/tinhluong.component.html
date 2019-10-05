@@ -1,0 +1,31 @@
+<div class="card text">
+    <div class="card-header">
+        TÍNH THƯỞNG TẾT NGUYÊN ĐÁN
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Họ tên</label>
+                <input type="text" [(ngModel)]="nv.hoten" [ngModelOptions]="{standalone: true}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Lương</label>
+                <input type="number" [(ngModel)]="nv.luong" [ngModelOptions]="{standalone: true}" class="form-control">
+            </div>
+            <div class="form-group">
+            <label class="mr-sm-2 sr-only">Giới tính</label>
+                <input type="radio" value="1" [(ngModel)]="nv.gioitinh" [ngModelOptions]="{standalone: true}">Nam
+                <input type="radio" value="2" [(ngModel)]="nv.gioitinh" [ngModelOptions]="{standalone: true}">Nữ
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Độ tuổi</label>
+                <select [(ngModel)]="nv.tile" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor ='let l of list' value="{{l.tile}}">{{l.tuoi}}</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer text-muted">
+        {{tinhthuong()}}
+    </div>
+</div>

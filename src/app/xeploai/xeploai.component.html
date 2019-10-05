@@ -1,0 +1,24 @@
+<form>
+    <div class="form-group">
+        <label for="exampleInputEmail1">ho ten</label>
+        <input type="text" [(ngModel)]="sv.hoten" [ngModelOptions]="{standalone: true}" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">ngay sinh</label>
+        <input type="date" [(ngModel)]="sv.ngaysinh" [ngModelOptions]="{standalone: true}" class="form-control">
+    </div>
+    <div class="form-group">
+    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gioi tinh</label>
+    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" [(ngModel)]="sv.gioitinh" [ngModelOptions]="{standalone: true}">
+        <option value="Nam">Nam</option>
+        <option value="Nu">Nu</option>
+    </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">diem</label>
+        <input type="number" [(ngModel)]="sv.diem" [ngModelOptions]="{standalone: true}" class="form-control">
+    </div>
+    <div class="alert alert-success" role="alert">
+            {{xeploai()}}
+          </div>
+</form>

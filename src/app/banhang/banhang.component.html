@@ -1,0 +1,74 @@
+<div class="card text">
+    <div class="card-header">
+        BÁN HÀNG GIẢI KHÁT
+    </div>
+    <div class="card-body">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TÊN HÀNG</th>
+                    <th scope="col">SỐ LƯỢNG</th>
+                    <th scope="col">ĐƠN GIÁ</th>
+                    <th scope="col">THÀNH TIỀN</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" [(ngModel)]="custom.chon1"
+                                [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </td>
+                    <td>Nước ngọt</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="number" [(ngModel)]="custom.soluong1" [ngModelOptions]="{standalone: true}"
+                                class="form-control">
+                        </div>
+                    </td>
+                    <td>10000</td>
+                    <td>{{thanhtien1()}} đồng</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" [(ngModel)]="custom.chon2"
+                                [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </td>
+                    <td>Cà phê đen</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="number" [(ngModel)]="custom.soluong2" [ngModelOptions]="{standalone: true}"
+                                class="form-control">
+                        </div>
+                    </td>
+                    <td>12000</td>
+                    <td>{{thanhtien2()}} đồng</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="1" [(ngModel)]="custom.chon3"
+                                [ngModelOptions]="{standalone: true}">
+                        </div>
+                    </td>
+                    <td>Thuốc lá</td>
+                    <td>
+                        <div class="form-group">
+                            <input type="number" [(ngModel)]="custom.soluong3" [ngModelOptions]="{standalone: true}"
+                                class="form-control">
+                        </div>
+                    </td>
+                    <td>18000</td>
+                    <td>{{thanhtien3()}} đồng</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        {{tinhtong()}} đồng
+    </div>
+</div>
